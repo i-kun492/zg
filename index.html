@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>你电脑坏啦！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       background-color: black;
       color: red;
       text-align: center;
       font-family: "Microsoft Yahei", sans-serif;
+      cursor: pointer; /* 鼠标变成手指，提示可点击 */
     }
     h1 {
       font-size: 36px;
@@ -18,6 +20,12 @@
       width: 300px;
       margin-top: 30px;
     }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -25,10 +33,16 @@
   <img src="https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif" alt="爆炸警报" />
   <p>正在清除你的手机数据……</p>
 
+  <button id="enterBtn">点我进入主页</button>
+
   <script>
     setTimeout(() => {
       alert("整蛊成功！这是假的😆");
     }, 7000);
+
+    document.getElementById("enterBtn").addEventListener("click", () => {
+      window.location.href = "https://i-kun492.github.io/zg/"; // 这里改成你想跳转的页面地址
+    });
   </script>
 </body>
 </html>
